@@ -1,5 +1,15 @@
+"""
+The 2 import statements import python libraries that are used
+in this code.
+The 'import tkinter as tk'
+"""
 import tkinter as tk
 import random
+
+GAME_WIDTH = 700
+GAME_HEIGHT = 700
+SPEED = 100
+SPACE_SIZE = 50
 
 class Snake:
     pass
