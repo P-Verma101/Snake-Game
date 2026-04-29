@@ -39,3 +39,8 @@ def check_collisions():
 
 def game_over():
     pass
+
+root = tk.Tk()
+root.title("Snake Game")
+root.mainloop()
+
