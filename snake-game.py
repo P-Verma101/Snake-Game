@@ -33,13 +33,30 @@ variable defines the size of each item in the game, such as the
 food that the snake eats and the segments of the snake's body.
 
 The fifth variable is 'BODY_PARTS' which is set to 3. This 
-variable defines the number of 
+variable defines the number of body parts that the snake starts
+with at the beginning of the game.
+
+The sixth variable is 'SNAKE_COLOR' which is set to '#A0D9D3'.
+This variable defines the color that the snake will have in
+the game. The color is presented in hexidecimal format.
+
+The seventh variable is 'FOOD_COLOR' which set to 'red'. This
+variable defines the color of the food that the snake eats in
+the game.
+
+The eighth variable is 'BACKGROUND_COLOR' which is set to
+'#00025B'. This variable defines the color of the background
+in the game.
 """
-GAME_WIDTH = 700
-GAME_HEIGHT = 700
-SPEED = 100
-SPACE_SIZE = 50
-BODY_PARTS = 3
+GAME_WIDTH = 700 #--> Window width in pixels
+GAME_HEIGHT = 700 #--> Window height in pixels
+SPEED = 100 #--> Speed of the snake
+SPACE_SIZE = 50 #--> Size of game items in pixels
+BODY_PARTS = 3 #--> Number of body parts in beginning
+SNAKE_COLOR = "#A0D9D3" #--> Color of snake body
+FOOD_COLOR = "red" #--> Color of food that snake eats
+BACKGROUND_COLOR = "#00025B" #--> Color of background in game
+
 
 class Snake:
     pass
