@@ -76,7 +76,49 @@ def check_collisions():
 def game_over():
     pass
 
+"""
+This block of code is responsible for creating the main 
+application window for the snake game. 
+The first line of the code in this block creates the main
+application window by calling 'tk.Tk()' and assigns it to the
+variable 'root'. This creates an empty window that will serve as
+the main window for the game.
+
+The second line of the code block sets the title of the window
+to "Snake Game" using the 'title' method of the 'root' window.
+
+The third line of the code block uses the 'resizable' method of
+the 'root' window to disable resizing of the window. The
+arguments 'False, False' passed to the 'resizable' method
+prevents the use from resizing the window in both the
+horizontal and vertical directions.
+
+The fourth line of the code block initalizes the score variable
+to 0. This variable will be used to keep track of the player's
+score in the game.
+
+The fifth line of the code block initializes the direction of 
+the snake to 'down'. This variable will be used to keep track 
+of the current direction of the snake's movement in the game.
+
+The sixth lin
+
+The last line of the code block calls the 'mainloop' method of
+the 'root' window. This method starts the main event loop of the
+application, which keeps the window open and responsive to user
+interactions. Without this line, the window would open and then
+immediately close, as the program would finish executing.
+"""
 root = tk.Tk()
 root.title("Snake Game")
+root.resizable(False, False)
+
+score = 0
+direction = 'down'
+label = label(window, text = "Score:{}".format(score), font = ("Arial", 40))
+label.pack()
+
+canvas = tk.Canvas(root, bg = BACKGROUND_COLOR, height = GAME_HEIGHT, width = GAME_WIDTH)
+
 root.mainloop()
 
