@@ -101,7 +101,36 @@ The fifth line of the code block initializes the direction of
 the snake to 'down'. This variable will be used to keep track 
 of the current direction of the snake's movement in the game.
 
-The sixth lin
+The sixth line of this code block creates a label variable
+that stores the 'label' widget. The label widget is created
+using the 'tkinter' label class. The root part of this line
+makes this this label a child of the 'root' window. It 
+essentially makes the label INSIDE the main window. The 'text'
+part of this line sets the text that is to be diaplayed and in
+this case it is 'Score:__' where the value of score is a 
+placeholder for the actual score that will be updated as the
+game progresses. The 'font' part of this line sets the font
+style as well as the size of the font. 
+
+The seventh line of this code displays the label in the window.
+The 'pack()' is a geometry manager method, and it tells tkinter
+to show this widget in the parent window using the pack layout.
+Without this line, the label exists in memory but is invisible.
+
+The eighth line of this code block creates a canvas variable that
+stores a Canvas widget using tkinter's Canvas class. This 
+variable makes the canvas a child of the 'root' window. the bg 
+part of this code sets the background to the constant 
+'BACKGROUND_COLOR', the height part of this line is set to the
+constant 'GAME_HEIGHT', and the width part is set to the 
+constant 'GAME_WIDTH'. This line creates a 700x700 dark blue
+drawing area inside the main window where the game will be played.
+
+The next line is 'canvas.pack()'. This line displays the canvas
+in the window. Similar to the 'label.pack()' line, this line
+uses the pack geometry manager to show the canvas widget. It 
+positions the canvas below the score label. Without this line,
+the canvas exists, but it is invisible.
 
 The last line of the code block calls the 'mainloop' method of
 the 'root' window. This method starts the main event loop of the
@@ -120,6 +149,14 @@ label.pack()
 
 canvas = tk.Canvas(root, bg = BACKGROUND_COLOR, height = GAME_HEIGHT, width = GAME_WIDTH)
 canvas.pack()
+
+root.update()
+
+root_width = root.winfo_width()
+root_height = root.winfo_height()
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
 
 root.mainloop()
 
