@@ -163,9 +163,17 @@ update/draw the window. This line refreshes the window and
 processes all pending GUI events. It makes sure widgets are 
 fully rendered before continuing. Without this line of code,
 the next lines might get wrong or the measurements might be
-old.
+old. This is basically like presentung the 'refresh' button
+to get the latest updates on the window.
 
-The second line of code in this block calls the 
+The second and third line of code in this block assign the
+window's actual width and height to the variables 'root_width'
+and 'root_height' respectively. The 'winfo_width()' and the 
+'winfo_height()' methods of the 'root' window are used to get
+the real-time measurements of the width. These measure the game 
+window, which in this case is 700x700 + title bar.
+
+The fo
 """
 root.update()
 root_width = root.winfo_width()
