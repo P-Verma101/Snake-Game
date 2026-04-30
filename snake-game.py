@@ -53,20 +53,33 @@ GAME_HEIGHT = 700 #--> Window height in pixels
 SPEED = 100 #--> Speed of the snake
 SPACE_SIZE = 50 #--> Size of game items in pixels
 BODY_PARTS = 3 #--> Number of body parts in beginning
-SNAKE_COLOR = "#A0D9D3" #--> Color of snake body
+SNAKE_COLOR = "#46E28C" #--> Color of snake body
 FOOD_COLOR = "red" #--> Color of food that snake eats
 BACKGROUND_COLOR = "#00025B" #--> Color of background in game
 
 
 class Snake:
-    pass
+    
+    def __init__(self):
+        self.body_size = BODY_PARTS
+        self.coordinates = []
+        self.squares = []
+
+        for i in range (0, BODY_PARTS):
+            self.coordinates.append ([0, 0])
+
+        for x, y in self.coordinates:
+            square = canvas.create_oval(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill = SNAKE_COLOR, tag = "Snake")
 
 class Food:
 
     def __init__(self):
         x = random.randint(0, (GAME_WIDTH/SPACE_SIZE) - 1) * SPACE_SIZE
         y = random.randint(0, (GAME_HEIGHT/SPACE_SIZE) - 1) * SPACE_SIZE
-    pass
+
+        self.coordinates = [x, y]
+
+        canvas.create_oval(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill = FOOD_COLOR, tag = "Food")
 
 def next_turn():
     pass
