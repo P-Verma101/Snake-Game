@@ -115,10 +115,11 @@ root.resizable(False, False)
 
 score = 0
 direction = 'down'
-label = label(window, text = "Score:{}".format(score), font = ("Arial", 40))
+label = tk.Label(root, text = "Score:{}".format(score), font = ("Arial", 40))
 label.pack()
 
 canvas = tk.Canvas(root, bg = BACKGROUND_COLOR, height = GAME_HEIGHT, width = GAME_WIDTH)
+canvas.pack()
 
 root.mainloop()
 
