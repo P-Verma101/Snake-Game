@@ -62,6 +62,9 @@ class Snake:
     pass
 
 class Food:
+
+    def __init__(self):
+        x = random.randint(0, )
     pass
 
 def next_turn():
@@ -189,7 +192,7 @@ screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 
 """
-
+This block of code results in the fame 
 """
 x = int((screen_width/2) - (root_width/2))
 y = int((screen_height/2) - (root_height/2))
