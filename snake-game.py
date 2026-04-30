@@ -150,8 +150,24 @@ label.pack()
 canvas = tk.Canvas(root, bg = BACKGROUND_COLOR, height = GAME_HEIGHT, width = GAME_WIDTH)
 canvas.pack()
 
-root.update()
+"""
+This block of code is responsible to prefectly center the game
+window on the user's screen. Without this code the window will
+appear at the top0left corner (0,0), but becuase it is present
+the code will appear perfectly centered in the middle of the 
+screen. 
 
+The first line of code in this block calls the 'update()' method
+of the 'root' window. This method forces tkinter to immediately
+update/draw the window. This line refreshes the window and 
+processes all pending GUI events. It makes sure widgets are 
+fully rendered before continuing. Without this line of code,
+the next lines might get wrong or the measurements might be
+old.
+
+The second line of code in this block calls the 
+"""
+root.update()
 root_width = root.winfo_width()
 root_height = root.winfo_height()
 screen_width = root.winfo_screenwidth()
