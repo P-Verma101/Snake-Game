@@ -206,7 +206,19 @@ screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 
 """
-This block of code results in the fame 
+This block of code centers the window on screen and initializes
+the game objects. 
+Lines one and two are calculate are variables x and y, that
+are hold the integer value of the x and y coordinates for the
+exact pixcel position to center the window.
+
+Line 3 is used to apply the window position. It moves the 
+window into the centered position.
+
+Line 4 is used to create the Snake game object. The purpose 
+of this is to prepare the snake for the game.
+
+Line 5 creates the Food game object. It 
 """
 x = int((screen_width/2) - (root_width/2))
 y = int((screen_height/2) - (root_height/2))
