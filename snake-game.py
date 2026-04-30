@@ -173,13 +173,31 @@ and 'root_height' respectively. The 'winfo_width()' and the
 the real-time measurements of the width. These measure the game 
 window, which in this case is 700x700 + title bar.
 
-The fo
+The fourth and fifth line of this block assigns the user's
+full screen width and height to the variables 'screen_width'
+and 'screen_height' respectively. The 'winfo_screenwidth()' and
+'winfo_screenheight()' methods of the 'root' window are used to
+get the real-time measurements of the user's screen. These
+measure the user's full screen, which can be different for each
+user. For example, one user might have a 1920x1080 screen, while
+another user might have a 2560x1440 screen.
 """
 root.update()
 root_width = root.winfo_width()
 root_height = root.winfo_height()
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
+
+"""
+
+"""
+x = int((screen_width/2) - (root_width/2))
+y = int((screen_height/2) - (root_height/2))
+
+root.geometry(f"{root_width}x{root_height}+{x}+{y}")
+
+snake = Snake()
+food = Food()
 
 
 root.mainloop()
