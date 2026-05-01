@@ -57,9 +57,29 @@ SNAKE_COLOR = "#46E28C" #--> Color of snake body
 FOOD_COLOR = "red" #--> Color of food that snake eats
 BACKGROUND_COLOR = "#00025B" #--> Color of background in game
 
+"""
+This block of code defines the 'Snake' class and its
+'__init__' constructor, whic creates a 3-segment snake at
+position (0, 0) on the canvas.
+ 
+The first line of code defines the 'Snake' class.
 
+The Second line of code is the constructor method. It runs
+automatically when the 'snake = Snake()' is done. The 
+'__init__' is the initializer, 'self' is the reference to
+this snake instance. It sets up nwe snake when created.
+
+The third line of code is 'self.body_size = BODY_PARTS'.
+The purpose of this line is to sture the inital snake 
+length. Since we established that the body length of the 
+snake is 3 with the 'BODY_PARTS = 3' constant this line
+is essentially an instance variable. It is unique to this
+snake.
+
+The fourth line is 'self.coordinates = []'
+"""
 class Snake:
-    
+
     def __init__(self):
         self.body_size = BODY_PARTS
         self.coordinates = []
@@ -218,7 +238,9 @@ window into the centered position.
 Line 4 is used to create the Snake game object. The purpose 
 of this is to prepare the snake for the game.
 
-Line 5 creates the Food game object. It 
+Line 5 creates the Food game object. It creates a representative
+of the 'Food' class. It stores the class in the 'food'
+variable. It prepares the food for the game.
 """
 x = int((screen_width/2) - (root_width/2))
 y = int((screen_height/2) - (root_height/2))
