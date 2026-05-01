@@ -76,7 +76,17 @@ snake is 3 with the 'BODY_PARTS = 3' constant this line
 is essentially an instance variable. It is unique to this
 snake.
 
-The fourth line is 'self.coordinates = []'
+The fourth line is 'self.coordinates = []'. This line
+creates an empty list to store each segment's (x, y) 
+position. The snake moves by updates these coordinates.
+
+The fifth line is 'self.squares = []' This line creates
+an empty list to store canvas rectanle IDs. It will hold
+the canvas object IDs. This will later be used to 
+move/delete snake segments.
+
+The next 2 lines generate the initial coordinates. They
+create 3 identical [0,0] positions for snake segments.
 """
 class Snake:
 
