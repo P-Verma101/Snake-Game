@@ -27,7 +27,7 @@ BACKGROUND_COLOR = "#00025B": Color of background in game
 """
 GAME_WIDTH = 700  # Window width in pixels
 GAME_HEIGHT = 700  # Window height in pixels
-SPEED = 100  # Speed of the snake
+SPEED = 110  # Speed of the snake
 SPACE_SIZE = 50  # Size of game items in pixels
 BODY_PARTS = 3  # Number of body parts in beginning
 SNAKE_COLOR = "#46E28C"  # Color of snake body
@@ -43,7 +43,20 @@ class Snake:
     'BODY_PARTS = 3' constant)
     (b.) Positions all 3 segments at the coordinate (0, 0)
     (in the top-left corner of the screen)
-    (c.) 
+    (c.) Draw each segment as a filled oval/cricl on the canvas
+    (d.) Stores everything that is needed to move the snake
+    later
+
+    'Class Snake' - This is defines the new class called 
+    'Snake'. This is like the blueprint for creating snake
+    objects.
+
+    'def __init__(self):' - This is a constructor method. It 
+    runs automaticallt when 'snake = Snake()' is done. The 'self'
+    reference in this function refers to the specifc instance.
+
+
+
     """
     def __init__(self):
         self.body_size = BODY_PARTS
