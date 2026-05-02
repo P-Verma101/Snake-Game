@@ -35,7 +35,16 @@ FOOD_COLOR = "#DE5983"  # Color of food that snake eats
 BACKGROUND_COLOR = "#00013C"  # Color of background in game
 
 class Snake:
-    
+    """
+    This class creates the initial snake object for a Snake 
+    game. When a 'Snake()' instance is created, it
+    automatically:
+    (a.) Sets up a snake with 3 body segments (defined by the
+    'BODY_PARTS = 3' constant)
+    (b.) Positions all 3 segments at the coordinate (0, 0)
+    (in the top-left corner of the screen)
+    (c.) 
+    """
     def __init__(self):
         self.body_size = BODY_PARTS
         self.coordinates = []
@@ -45,8 +54,7 @@ class Snake:
             self.coordinates.append([0, 0])
 
         for x, y in self.coordinates:
-            oval = canvas.create_oval(x, y, x + SPACE_SIZE, y + SPACE_SIZE, 
-                                    fill=SNAKE_COLOR, tag="snake")
+            oval = canvas.create_oval(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR, tag="snake")
             self.squares.append(oval)
 
 class Food:
