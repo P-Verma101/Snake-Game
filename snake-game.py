@@ -35,9 +35,7 @@ FOOD_COLOR = "#DE5983"  # Color of food that snake eats
 BACKGROUND_COLOR = "#00013C"  # Color of background in game
 
 class Snake:
-    """
-    This class creates a 3-segment snake at position (0, 0) on the canvas.
-    """
+    
     def __init__(self):
         self.body_size = BODY_PARTS
         self.coordinates = []
